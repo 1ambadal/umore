@@ -163,7 +163,7 @@ function drawBarGraph(data, id) {
 <form class="text-center" method = "POST" action="{% url 'add-rant' %}">
     {% csrf_token %}
     <div class="searchbox-wrap">
-        <textarea id="rant" name="rant" placeholder="  ..." width="100%"></textarea>
+        <textarea id="rant" name="rant" placeholder="  ..." width="100%" required></textarea>
     </div>
     <button style ="margin-top: 10px; background-color: #161617; font-weight: bold; border-color: #161617; border-radius: 15px; width: 20%; color:#bbbfbd">RANT</button>
 </form>

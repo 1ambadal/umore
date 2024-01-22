@@ -17,9 +17,9 @@
 <div class = "container" style="background-color: #161617; padding: 20px; margin-top: 20px; border-radius: 15px;">
 <form method = "POST" action="{% url 'login' %}">
     {% csrf_token %}
-    <input placeholder="Username" type="text" name="username" />
+    <input placeholder="Username" type="text" name="username" required/>
     <br/>
-    <input placeholder="Password" type="password" name="password" />
+    <input placeholder="Password" type="password" name="password" required/>
     <br/>
     <input class ="btn btn-primary" type="submit" style="font-size: 20px; background-color: #1f1f1f; color:#757575; border-radius: 15px;" value= "Login" />
     <br/>
