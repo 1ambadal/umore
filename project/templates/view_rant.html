@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div style="align-items: center;">
+<br>
+    <p style ="font-size:12px; text-align:right; color:#bbbfbd; font-weight: bold;">{{rant.created_at}}</p>
+    <p style ="font-size:20px; text-align:left; color:#bbbfbd; font-weight: bold;">{{rant.description}}</p>
+    <a href="delete-rant/{{rant.id}}" style="color: #fa452d; font-weight: bold; font-size: 15px; margin-left: 38%;">DELETE</a>
+</div>
+
+{% endblock %}

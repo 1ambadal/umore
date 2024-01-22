@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if rants %}
+<br>
+<ul>
+{% for rant in rants %}
+<li>
+    <a href={{rant.id}}>{{rant.description|slice:"0:95"}}</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<style>
+
+a:link {
+  color: #bbbfbd;
+  background-color: transparent;
+  font-weight: bold;
+}
+a:visited {
+  color: #bbbfbd;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 8px;
+  background-color: #161617;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+
+
+</style>
+
+{% endblock %}

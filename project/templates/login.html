@@ -1,0 +1,68 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% if error %}
+{{ error }}
+
+{% endif %}
+
+<div class="text-center">
+    <br>
+    <br>
+    <img src="{% static 'logo.png' %}" alt="Italian Trulli">
+</div>
+<div class = "container" style="background-color: #161617; padding: 20px; margin-top: 20px; border-radius: 15px;">
+<form method = "POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <input placeholder="Username" type="text" name="username" />
+    <br/>
+    <input placeholder="Password" type="password" name="password" />
+    <br/>
+    <input class ="btn btn-primary" type="submit" style="font-size: 20px; background-color: #1f1f1f; color:#757575; border-radius: 15px;" value= "Login" />
+    <br/>
+</form>
+</div>
+  
+<style>
+    /* Center the form on the page */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    
+    /* Style the form header */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    
+    /* Style the form input fields */
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+      border-radius: 15px;
+      border: 1px solid #1f1f1f;
+      background-color: #1f1f1f;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    
+    /* Style the form submit button */
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    
+</style> 
+
+{% endblock %}
